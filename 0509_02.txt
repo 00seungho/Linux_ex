@@ -191,15 +191,6 @@ root@polystudent-virtual-machine:~/바탕화면# sample
 apt install barcode
 root@polystudent-virtual-machine:~/바탕화면# ls
  mydata.txt  '새 폴더'
-root@polystudent-virtual-machine:~/바탕화면# stop
-'stop' 명령어를 찾을 수 없습니다. 그러나 유사한 명령어 21 개가 있습니다.
-root@polystudent-virtual-machine:~/바탕화면# help stop
-bash: help: `stop'에 해당하는 도움말 주제가 없습니다. `man -k stop' 또는 `info stop' 명령을 입력하십시오.
-root@polystudent-virtual-machine:~/바탕화면# link zelda
-link: `zelda' 뒤에 명령어가 빠짐
-자세한 정보는 'link --help'를 입력하십시오.
-root@polystudent-virtual-machine:~/바탕화면# zelda
-zelda: 명령을 찾을 수 없습니다
 root@polystudent-virtual-machine:~/바탕화면# link
 link: 피연산자 빠짐
 자세한 정보는 'link --help'를 입력하십시오.
