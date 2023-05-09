@@ -1,0 +1,96 @@
+root@polystudent-virtual-machine:~/linkdir# ln originalfile hardlink
+ln: 'originalfile' 접근 실패: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~/linkdir# ls
+originafile
+root@polystudent-virtual-machine:~/linkdir# ln originafile hardlink
+root@polystudent-virtual-machine:~/linkdir# ln -s originafile
+ln: './originafile' 심볼릭 링크 만들기 실패: 파일이 있습니다
+root@polystudent-virtual-machine:~/linkdir# mv originafile originalfile
+root@polystudent-virtual-machine:~/linkdir# ls
+hardlink  originalfile
+root@polystudent-virtual-machine:~/linkdir# ln -s originalfile softlink
+root@polystudent-virtual-machine:~/linkdir# ls -l
+합계 8
+-rw-r--r-- 2 root root 47  5월  9 10:50 hardlink
+-rw-r--r-- 2 root root 47  5월  9 10:50 originalfile
+lrwxrwxrwx 1 root root 12  5월  9 11:11 softlink -> originalfile
+root@polystudent-virtual-machine:~/linkdir# ls -il
+합계 8
+265071 -rw-r--r-- 2 root root 47  5월  9 10:50 hardlink
+265071 -rw-r--r-- 2 root root 47  5월  9 10:50 originalfile
+265070 lrwxrwxrwx 1 root root 12  5월  9 11:11 softlink -> originalfile
+root@polystudent-virtual-machine:~/linkdir# mv originalfile ../
+root@polystudent-virtual-machine:~/linkdir# ls
+hardlink  softlink
+root@polystudent-virtual-machine:~/linkdir# cat hardlink
+링크시킬 원본 파일을 작성합니다
+
+root@polystudent-virtual-machine:~/linkdir# cat softlink
+cat: softlink: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~/linkdir# cd
+root@polystudent-virtual-machine:~# ls -il originalfile 
+265071 -rw-r--r-- 2 root root 47  5월  9 10:50 originalfile
+root@polystudent-virtual-machine:~# mv originalfile ./linkdir
+root@polystudent-virtual-machine:~# cd linkdir/
+root@polystudent-virtual-machine:~/linkdir# ls
+hardlink  originalfile  softlink
+root@polystudent-virtual-machine:~/linkdir# cat softlink 
+링크시킬 원본 파일을 작성합니다
+
+root@polystudent-virtual-machine:~/linkdir# cd
+root@polystudent-virtual-machine:~# ls
+linkdir   poly1.xz  test1.txt     test3     문서      사진
+new       snap      test1.txt.xz  공개      바탕화면  음악
+poly.tar  test      test2         다운로드  비디오    템플릿
+root@polystudent-virtual-machine:~# nano chickenbreast
+root@polystudent-virtual-machine:~# ls chickenbreast
+chickenbreast
+root@polystudent-virtual-machine:~# ^C
+root@polystudent-virtual-machine:~# ^C
+root@polystudent-virtual-machine:~# ps
+    PID TTY          TIME CMD
+   3075 pts/1    00:00:00 sudo
+   3076 pts/1    00:00:00 su
+   3077 pts/1    00:00:00 bash
+   3408 pts/1    00:00:00 ps
+root@polystudent-virtual-machine:~# ps -ef|grep
+사용법: grep [<옵션>]... <패턴> [<파일>]...
+자세한 정보는 'grep --help'를 입력하십시오.
+root@polystudent-virtual-machine:~# ps
+    PID TTY          TIME CMD
+   3075 pts/1    00:00:00 sudo
+   3076 pts/1    00:00:00 su
+   3077 pts/1    00:00:00 bash
+   3460 pts/1    00:00:00 ps
+root@polystudent-virtual-machine:~# ps -ef|grep liber
+root        3463    3077  0 11:35 pts/1    00:00:00 grep --color=auto liber
+root@polystudent-virtual-machine:~# yes > /dev/null
+[1]+  멈춤                  yes > /dev/null
+root@polystudent-virtual-machine:~# bg
+[1]+ yes > /dev/null &
+root@polystudent-virtual-machine:~# jobs
+[1]+  실행중               yes > /dev/null &
+root@polystudent-virtual-machine:~# fg 1
+yes > /dev/null
+^Z  
+[1]+  멈춤                  yes > /dev/null
+root@polystudent-virtual-machine:~# bg
+[1]+ yes > /dev/null &
+root@polystudent-virtual-machine:~# ps -ef | grep yes
+root        3472    3077 95 11:35 pts/1    00:02:39 yes
+root        3618    3077  0 11:38 pts/1    00:00:00 grep --color=auto yes
+root@polystudent-virtual-machine:~# kill -9 3472
+root@polystudent-virtual-machine:~# ps -ef | grep yes
+root        3621    3077  0 11:39 pts/1    00:00:00 grep --color=auto yes
+[1]+  죽었음               yes > /dev/null
+//새 도스창
+root@polystudent-virtual-machine:~/바탕화면# cd
+root@polystudent-virtual-machine:~# ps -ef|grep yes
+root        3625    3077 99 11:40 pts/1    00:00:58 yes
+root        3629    3479  0 11:41 pts/2    00:00:00 grep --color=auto yes
+root@polystudent-virtual-machine:~# kill -9 3625 
+//새 도스창
+
+root@polystudent-virtual-machine:~# yes > /dev/null
+죽었음
+root@polystudent-virtual-machine:~# 
