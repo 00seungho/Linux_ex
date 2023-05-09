@@ -1,0 +1,47 @@
+root@polystudent-virtual-machine:~/바탕화면# touch mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l
+합계 4
+-rw-r--r-- 1 root root    0  5월  9 09:25  mydata.txt
+drwxr-xr-x 2 root root 4096  3월 21 09:46 '새 폴더'
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-rw-r--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# 배고파...
+배고파...: 명령을 찾을 수 없습니다
+root@polystudent-virtual-machine:~/바탕화면# 힘이 없어....
+힘이: 명령을 찾을 수 없습니다
+root@polystudent-virtual-machine:~/바탕화면# 배고파...
+배고파...: 명령을 찾을 수 없습니다
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-rw-r--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# tail mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# vi mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# chmod 777 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# chmod 777 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-rwxrwxrwx 1 root root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# 
+root@polystudent-virtual-machine:~/바탕화면# chmod u+x mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-rwxrwxrwx 1 root root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# chmod 644 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls - l mydata.txt
+ls: '-'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+ls: 'l'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-rw-r--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# chmod u+x mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-rwxr--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# chmod u-w mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.tx
+ls: 'mydata.tx'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-r-xr--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# chmod g+w mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-r-xrw-r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# chmod o+x mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-r-xrw-r-x 1 root root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# 
