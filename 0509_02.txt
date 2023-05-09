@@ -1,0 +1,234 @@
+root@polystudent-virtual-machine:~/바탕화면# tail etc/shadow
+tail: 읽기를 위해 'etc/shadow'을(를) 열 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~/바탕화면# tail /etc/shadow
+gnome-initial-setup:*:19411:0:99999:7:::
+hplip:*:19411:0:99999:7:::
+gdm:*:19411:0:99999:7:::
+polystudent:$y$j9T$RU92S/uF2uS0cRn7jVqxm0$8JYpoqKM./wSuadR3M1LTxr0gIXf2T7/kMYhqNeDY3B:19430:0:99999:7:::
+poly1:$y$j9T$yTLOIm5hO9/NULzm2G1Mi.$adQNOrS/nzs8/X3xUNOG/Kj20JArxWuoRS93M.LFKy4:19479:10:30:10::20818:
+poly2:$y$j9T$o3V6YWDXFJXzLjoqYHLSJ0$V3/5PF9OxXUUhh2IH7QJD474unka5b.i9KDUyYuSBf6:19479:0:99999:7:::
+poly3:$y$j9T$A3utr6qdHA59kTLI9T1i80$8HP0b4sRJSYB3pTyoaTqvo10j.4ObiTlHI4XnQ3lME2:19479:0:99999:7:::
+poly4:$y$j9T$b/RpTWe6QahzHgQu/yS5J/$faU/dOIcY4Dhxz3olnY41brw6MVw2ahm44CRxKbb8v2:19479:0:99999:7:::
+hanbit1:$y$j9T$RB/YObYCh5OXSh1z7bbma.$39bALh8rFKy2jJggoX7451Y5wCX/OR8Xc06ZVFHB8Y1:19479:0:99999:7:::
+hanbit2:$y$j9T$RJrgucdvB2UlXJ5yfXY4L.$KOrPy5lKGsMrZxLyVqUsQmDQNurvd7BzfaLd/YcZDg/:19479:0:99999:7:::
+root@polystudent-virtual-machine:~/바탕화면# chown poly1 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-r-xrw-r-x 1 poly1 root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# chown poly2.poly2
+chown: `poly2.poly2' 뒤에 명령어가 빠짐
+자세한 정보는 'chown --help'를 입력하십시오.
+root@polystudent-virtual-machine:~/바탕화면# chown poly2.poly2 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-r-xrw-r-x 1 poly2 poly2 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# chgrp root mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-r-xrw-r-x 1 poly2 root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# ls -l mydata.txt
+-r-xrw-r-x 1 poly2 root 0  5월  9 09:25 mydata.txt
+root@polystudent-virtual-machine:~/바탕화면# nano sample
+root@polystudent-virtual-machine:~/바탕화면# tail sample
+배 고 파 배 고 파 배 고 파 배 고 파 배 고 파 배 고 파
+root@polystudent-virtual-machine:~/바탕화면# cat sample
+배 고 파 배 고 파 배 고 파 배 고 파 배 고 파 배 고 파
+root@polystudent-virtual-machine:~/바탕화면# ls /var
+backups  crash  local  log   metrics  run   spool
+cache    lib    lock   mail  opt      snap  tmp
+root@polystudent-virtual-machine:~/바탕화면# ls -l sample
+-rw-r--r-- 1 root root 72  5월  9 10:13 sample
+root@polystudent-virtual-machine:~/바탕화면# chmod u+x sample
+root@polystudent-virtual-machine:~/바탕화면# ls -l sample
+-rwxr--r-- 1 root root 72  5월  9 10:13 sample
+root@polystudent-virtual-machine:~/바탕화면# sample
+명령어 'sample' 을(를) 찾을 수 없습니다. 그러나 다음을 통해 설치할 수 있습니다:
+apt install barcode
+root@polystudent-virtual-machine:~/바탕화면# ./sample
+./sample: 줄 1: 배: 명령어를 찾을 수 없음
+root@polystudent-virtual-machine:~/바탕화면# whoami
+root
+root@polystudent-virtual-machine:~/바탕화면# chown ubuntu sample
+chown: 부적절한 사용자: `ubuntu'
+root@polystudent-virtual-machine:~/바탕화면# chown polystuent sample
+chown: 부적절한 사용자: `polystuent'
+root@polystudent-virtual-machine:~/바탕화면# tail etc/shadow
+tail: 읽기를 위해 'etc/shadow'을(를) 열 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~/바탕화면# tail /etc/shadow
+gnome-initial-setup:*:19411:0:99999:7:::
+hplip:*:19411:0:99999:7:::
+gdm:*:19411:0:99999:7:::
+polystudent:$y$j9T$RU92S/uF2uS0cRn7jVqxm0$8JYpoqKM./wSuadR3M1LTxr0gIXf2T7/kMYhqNeDY3B:19430:0:99999:7:::
+poly1:$y$j9T$yTLOIm5hO9/NULzm2G1Mi.$adQNOrS/nzs8/X3xUNOG/Kj20JArxWuoRS93M.LFKy4:19479:10:30:10::20818:
+poly2:$y$j9T$o3V6YWDXFJXzLjoqYHLSJ0$V3/5PF9OxXUUhh2IH7QJD474unka5b.i9KDUyYuSBf6:19479:0:99999:7:::
+poly3:$y$j9T$A3utr6qdHA59kTLI9T1i80$8HP0b4sRJSYB3pTyoaTqvo10j.4ObiTlHI4XnQ3lME2:19479:0:99999:7:::
+poly4:$y$j9T$b/RpTWe6QahzHgQu/yS5J/$faU/dOIcY4Dhxz3olnY41brw6MVw2ahm44CRxKbb8v2:19479:0:99999:7:::
+hanbit1:$y$j9T$RB/YObYCh5OXSh1z7bbma.$39bALh8rFKy2jJggoX7451Y5wCX/OR8Xc06ZVFHB8Y1:19479:0:99999:7:::
+hanbit2:$y$j9T$RJrgucdvB2UlXJ5yfXY4L.$KOrPy5lKGsMrZxLyVqUsQmDQNurvd7BzfaLd/YcZDg/:19479:0:99999:7:::
+root@polystudent-virtual-machine:~/바탕화면# ls -l sample
+-rwxr--r-- 1 root root 72  5월  9 10:13 sample
+root@polystudent-virtual-machine:~/바탕화면# chown polystudent sample
+root@polystudent-virtual-machine:~/바탕화면# ls -l sample
+-rwxr--r-- 1 polystudent root 72  5월  9 10:13 sample
+root@polystudent-virtual-machine:~/바탕화면# chown polystudent.polystudent sample
+root@polystudent-virtual-machine:~/바탕화면# ls -l sample
+-rwxr--r-- 1 polystudent polystudent 72  5월  9 10:13 sample
+root@polystudent-virtual-machine:~/바탕화면# chown su -polystudent
+chown: 부적절한 옵션 -- 'p'
+자세한 정보는 'chown --help'를 입력하십시오.
+root@polystudent-virtual-machine:~/바탕화면# su -polystudent
+su: 부적절한 옵션 -- 'o'
+Try 'su --help' for more information.
+root@polystudent-virtual-machine:~/바탕화면# su polystudent
+polystudent@polystudent-virtual-machine:/root/바탕화면$ su -polystudent
+su: 부적절한 옵션 -- 'o'
+Try 'su --help' for more information.
+polystudent@polystudent-virtual-machine:/root/바탕화면$ root
+명령어 'root' 을(를) 찾을 수 없습니다. 그러나 다음을 통해 설치할 수 있습니다:
+sudo snap install root-framework
+polystudent@polystudent-virtual-machine:/root/바탕화면$ su
+암호: 
+1234
+su: 인증 실패
+polystudent@polystudent-virtual-machine:/root/바탕화면$ 1234
+1234: 명령을 찾을 수 없습니다
+polystudent@polystudent-virtual-machine:/root/바탕화면$ su
+암호: 
+
+su: 인증 실패
+polystudent@polystudent-virtual-machine:/root/바탕화면$ 
+polystudent@polystudent-virtual-machine:/root/바탕화면$ pwd
+/root/바탕화면
+polystudent@polystudent-virtual-machine:/root/바탕화면$ ls -l /root/sample
+ls: '/root/sample'에 접근할 수 없음: 허가 거부
+polystudent@polystudent-virtual-machine:/root/바탕화면$ ls -ld /root
+drwx------ 20 root root 4096  4월 18 11:08 /root
+polystudent@polystudent-virtual-machine:/root/바탕화면$ tail sample
+배 고 파 배 고 파 배 고 파 배 고 파 배 고 파 배 고 파
+polystudent@polystudent-virtual-machine:/root/바탕화면$ mv sample ~polystudent
+mv: 'sample'를 '/home/polystudent/sample'로 옮길 수 없음: 허가 거부
+polystudent@polystudent-virtual-machine:/root/바탕화면$ logout
+bash: logout: 로그인 셸이 아님: `exit'를 사용하십시오
+polystudent@polystudent-virtual-machine:/root/바탕화면$ root
+명령어 'root' 을(를) 찾을 수 없습니다. 그러나 다음을 통해 설치할 수 있습니다:
+sudo snap install root-framework
+polystudent@polystudent-virtual-machine:/root/바탕화면$ sudo su root
+[sudo] polystudent 암호: 
+root@polystudent-virtual-machine:~/바탕화면# mv sample ~polystudent
+root@polystudent-virtual-machine:~/바탕화면# ls
+ mydata.txt  '새 폴더'
+root@polystudent-virtual-machine:~/바탕화면# ls /polystudend
+ls: '/polystudend'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~/바탕화면# ls -l /polystudend
+ls: '/polystudend'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~/바탕화면# login
+polystudent-virtual-machine 로그인: 1234
+암호: 
+
+
+로그인이 맞지 않습니다
+polystudent-virtual-machine 로그인: su
+암호: 
+dsadsa
+dsadaada
+
+로그인이 맞지 않습니다
+polystudent-virtual-machine 로그인: polystudent
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+마지막 로그인: 화  4월  4 10:37:23 KST 2023 일시 tty1
+polystudent@polystudent-virtual-machine:~$ logout
+root@polystudent-virtual-machine:~/바탕화면# su - polystudent
+polystudent@polystudent-virtual-machine:~$ ls -l
+합계 40
+-rwxr--r-- 1 polystudent polystudent   72  5월  9 10:13 sample
+drwx------ 4 polystudent polystudent 4096  3월 14 10:55 snap
+drwxr-xr-x 2 polystudent polystudent 4096  3월 14 10:43 공개
+drwxr-xr-x 2 polystudent polystudent 4096  3월 14 10:43 다운로드
+drwxr-xr-x 2 polystudent polystudent 4096  3월 14 10:43 문서
+drwxr-xr-x 2 polystudent polystudent 4096  3월 14 10:43 바탕화면
+drwxr-xr-x 2 polystudent polystudent 4096  3월 14 10:43 비디오
+drwxr-xr-x 2 polystudent polystudent 4096  3월 14 10:43 사진
+drwxr-xr-x 2 polystudent polystudent 4096  3월 14 10:43 음악
+drwxr-xr-x 2 polystudent polystudent 4096  3월 14 10:43 템플릿
+polystudent@polystudent-virtual-machine:~$ ls -l sample
+-rwxr--r-- 1 polystudent polystudent 72  5월  9 10:13 sample
+polystudent@polystudent-virtual-machine:~$ pw
+pw: 명령을 찾을 수 없습니다
+polystudent@polystudent-virtual-machine:~$ pwd
+/home/polystudent
+polystudent@polystudent-virtual-machine:~$ chmod 777 sample
+polystudent@polystudent-virtual-machine:~$ ls -l sample
+-rwxrwxrwx 1 polystudent polystudent 72  5월  9 10:13 sample
+polystudent@polystudent-virtual-machine:~$ chown root
+chown: `root' 뒤에 명령어가 빠짐
+자세한 정보는 'chown --help'를 입력하십시오.
+polystudent@polystudent-virtual-machine:~$ chown root.root sample
+chown: 'sample'의 소유권 바꾸는 중: 명령을 허용하지 않음
+polystudent@polystudent-virtual-machine:~$ logout
+root@polystudent-virtual-machine:~/바탕화면# ls -l /polystudend
+ls: '/polystudend'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~/바탕화면# sample
+명령어 'sample' 을(를) 찾을 수 없습니다. 그러나 다음을 통해 설치할 수 있습니다:
+apt install barcode
+root@polystudent-virtual-machine:~/바탕화면# ls
+ mydata.txt  '새 폴더'
+root@polystudent-virtual-machine:~/바탕화면# stop
+'stop' 명령어를 찾을 수 없습니다. 그러나 유사한 명령어 21 개가 있습니다.
+root@polystudent-virtual-machine:~/바탕화면# help stop
+bash: help: `stop'에 해당하는 도움말 주제가 없습니다. `man -k stop' 또는 `info stop' 명령을 입력하십시오.
+root@polystudent-virtual-machine:~/바탕화면# link zelda
+link: `zelda' 뒤에 명령어가 빠짐
+자세한 정보는 'link --help'를 입력하십시오.
+root@polystudent-virtual-machine:~/바탕화면# zelda
+zelda: 명령을 찾을 수 없습니다
+root@polystudent-virtual-machine:~/바탕화면# link
+link: 피연산자 빠짐
+자세한 정보는 'link --help'를 입력하십시오.
+root@polystudent-virtual-machine:~/바탕화면# 
+root@polystudent-virtual-machine:~/바탕화면# link
+link: 피연산자 빠짐
+자세한 정보는 'link --help'를 입력하십시오.
+root@polystudent-virtual-machine:~/바탕화면# 
+root@polystudent-virtual-machine:~/바탕화면# 
+root@polystudent-virtual-machine:~/바탕화면# 
+root@polystudent-virtual-machine:~/바탕화면# cd
+root@polystudent-virtual-machine:~# mkdir linkdir
+root@polystudent-virtual-machine:~# cd linkir/
+bash: cd: linkir/: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~# cd linkir/
+bash: cd: linkir/: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~# cd linkir/
+bash: cd: linkir/: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~# cd linkir/
+bash: cd: linkir/: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~# cd linkidir/
+bash: cd: linkidir/: 그런 파일이나 디렉터리가 없습니다
+root@polystudent-virtual-machine:~# cd linkdir/
+root@polystudent-virtual-machine:~/linkdir# nano originafile\
+> nano originafile
+root@polystudent-virtual-machine:~/linkdir# nano originafile
+root@polystudent-virtual-machine:~/linkdir# cat originafile
+링크시킬 원본 파일을 작성합니다
+
+root@polystudent-virtual-machine:~/linkdir# ^C
+root@polystudent-virtual-machine:~/linkdir# ^C
+root@polystudent-virtual-machine:~/linkdir# 
